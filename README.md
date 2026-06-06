@@ -11,20 +11,3 @@
 ![Status](https://img.shields.io/badge/Status-In%20Progress-orange?style=flat)
 
 ## Overview
-
-Flight Analytics Lakehouse is an end-to-end Azure Data Engineering project that processes and analyzes over 30 million flight records using a modern Lakehouse architecture.
-
-The platform ingests raw aviation datasets into Azure Data Lake Storage Gen2, transforms and validates data through a Medallion Architecture (Bronze, Silver, and Gold layers), and delivers analytics-ready datasets for reporting and business intelligence.
-
-Built using Microsoft Azure, Azure Databricks, Azure Synapse Analytics, SQL Server, and PySpark, the project demonstrates industry-standard data engineering practices including:
-
-- Data Lakehouse Architecture
-- ETL / ELT Pipeline Design
-- Large-Scale Data Processing
-- Data Quality & Validation
-- Dimensional Data Modeling
-- Analytical Data Warehousing
-- Cloud-Native Data Engineering
-- Business Intelligence & Visualization
-
-The resulting platform enables analysis of flight performance, delays, airline operations, airport activity, and operational trends at scale while showcasing a production-inspired Azure analytics stack.
