@@ -24,6 +24,15 @@ This project covers the entire data workflow: **Data Engineering, Data Analysis 
 | Processing Engine | Synapse Analytics + Databricks |
 | Visualization Layer | Tableau |
 
+## Features
+
+- Implements a Medallion Architecture (Bronze → Silver → Gold) on Microsoft Azure.
+- Processes 30M+ flight records and 119 attributes from the U.S. Department of Transportation dataset ([link](https://www.kaggle.com/datasets/robikscube/flight-delay-dataset-20182022?select=readme.md))
+- Builds a cloud-native ETL / ELT pipeline using Azure Data Lake Storage Gen2, Synapse Analytics, and Databricks.
+- Transforms raw aviation data into analytics-ready datasets through cleansing, standardization, and enrichment.
+- Designs fact and dimension tables optimized for reporting and KPI analysis.
+- Delivers interactive Tableau dashboards for operational and business intelligence insights.
+- Explores airline performance, airport reliability, route analysis, delays, and cancellations at scale.
 
 ## Why?
 
