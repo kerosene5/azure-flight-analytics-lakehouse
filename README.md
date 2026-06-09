@@ -34,6 +34,22 @@ This project covers the entire data workflow: **Data Engineering, Data Analysis 
 - Delivers interactive Tableau dashboards for operational and business intelligence insights.
 - Explores airline performance, airport reliability, route analysis, delays, and cancellations at scale.
 
+## Table of Contents
+
+- [Features](#features)
+- [Why?](#why)
+- [Architecture](#architecture)
+- [Business Questions](#business-questions)
+- [Dataset](#dataset)
+- [Azure Setup](#current-azure-setup)
+- [Medallion Architecture](#medallion-architecture)
+  - [Bronze](#bronze)
+  - [Silver](#silver)
+  - [Gold](#gold)
+- [KPI Plan](#kpi-plan)
+- [Repository Structure](#repository-structure)
+- [Project Status](#project-status)
+
 ## Why?
 
 Most flight delay / prediction projects focus solely on dashboard creation or exploratory analysis. This project was built to go beyond visualization and replicate a production-style data engineering workflow on Microsoft Azure.
