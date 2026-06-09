@@ -76,7 +76,7 @@ flowchart LR
     %% =====================
 
     subgraph SOURCE["Data Source"]
-        K["Kaggle Flight Status Dataset<br/>30M+ Records | 119 Columns"]
+        K["Flight Status Prediction (Dataset) <br/>30M+ Rows, 119 Columns"]
     end
 
     %% =====================
@@ -84,26 +84,26 @@ flowchart LR
     %% =====================
 
     subgraph INGEST["Ingestion Layer"]
-        DL["Local Source Files<br/>Parquet + CSV"]
+        DL["File Extract <br/>Parquet + CSV"]
     end
 
     %% =====================
     %% STORAGE
     %% =====================
 
-    subgraph STORAGE["Azure Data Lake Storage Gen2"]
-        B["Bronze Layer<br/>Raw Source Data"]
-        S["Silver Layer<br/>Cleaned & Standardized Data"]
-        G["Gold Layer<br/>Analytics-Ready Data"]
+    subgraph STORAGE["Azure Data Lake Storage (ADLS) Gen2 "]
+        B["Bronze Layer<br/>Raw Data Extract"]
+        S["Silver Layer<br/>Cleaned, Transformed & Standardized Data"]
+        G["Gold Layer<br/>Analytics-Ready Data with KPI columns, Fact and Dimension Tables, <br> Star / Snowflake Schema"]
     end
 
     %% =====================
     %% PROCESSING
     %% =====================
 
-    subgraph PROCESS["Data Processing & Transformation"]
+    subgraph PROCESS["Data Processing & Transformation (ETL Pipeline)"]
         P1["Azure Synapse Analytics<br/>Bronze → Silver"]
-        P2["Azure Databricks + PySpark<br/>Data Cleansing & Validation"]
+        P2["Azure Databricks (PySpark)<br/>Data Cleansing & Validation"]
         P3["Azure Synapse Analytics<br/>Silver → Gold"]
     end
 
