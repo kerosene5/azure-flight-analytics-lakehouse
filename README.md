@@ -10,7 +10,6 @@ A production-style Azure Data Lakehouse that transforms **30 million flight reco
 
 The pipeline implements a **Medallion Architecture (Bronze → Silver → Gold)** using Azure Data Lake Storage Gen2, Azure Synapse Analytics (SQL Server), Azure Databricks (PySpark) to transform raw aviation data into analytics-ready fact and dimension models for KPI reporting and dashboarding.
 
-
 This project covers the entire data workflow: **Data Engineering, Data Analysis and Data Visualization.**
 
 ### Key Metrics
@@ -23,16 +22,6 @@ This project covers the entire data workflow: **Data Engineering, Data Analysis 
 | Cloud Platform | Microsoft Azure |
 | Processing Engine | Synapse Analytics + Databricks |
 | Visualization Layer | Tableau |
-
-## Features
-
-- Implements a Medallion Architecture (Bronze → Silver → Gold) on Microsoft Azure.
-- Processes 30M+ flight records and 119 attributes from the U.S. Department of Transportation dataset [(link)](https://www.kaggle.com/datasets/robikscube/flight-delay-dataset-20182022?select=readme.md)
-- Builds a cloud-native ETL / ELT pipeline using Azure Data Lake Storage Gen2, Synapse Analytics, and Databricks.
-- Transforms raw aviation data into analytics-ready datasets through cleansing, standardization, and enrichment.
-- Designs fact and dimension tables optimized for reporting and KPI analysis.
-- Delivers interactive Tableau dashboards for operational and business intelligence insights.
-- Explores airline performance, airport reliability, route analysis, delays, and cancellations at scale.
 
 ## Table of Contents
 
@@ -50,9 +39,15 @@ This project covers the entire data workflow: **Data Engineering, Data Analysis 
 - [Repository Structure](#repository-structure)
 - [Project Status](#project-status)
 
-## Architecture
+## Features
 
-
+- Implements a Medallion Architecture (Bronze → Silver → Gold) on Microsoft Azure.
+- Processes 30M+ flight records and 119 attributes from the U.S. Department of Transportation dataset [(link)](https://www.kaggle.com/datasets/robikscube/flight-delay-dataset-20182022?select=readme.md)
+- Builds a cloud-native ETL / ELT pipeline using Azure Data Lake Storage Gen2, Synapse Analytics, and Databricks.
+- Transforms raw aviation data into analytics-ready datasets through cleansing, standardization, and enrichment.
+- Designs fact and dimension tables optimized for reporting and KPI analysis.
+- Delivers interactive Tableau dashboards for operational and business intelligence insights.
+- Explores airline performance, airport reliability, route analysis, delays, and cancellations at scale.
 
 ## Why?
 
@@ -67,6 +62,119 @@ The primary objectives were:
 - Build a reporting layer capable of supporting business intelligence and operational decision-making.
 
 The goal is to learn and demonstrate both sides of the workflow: reliable data engineering in Azure and practical data analysis / visualization of business KPIs in Tableau.
+
+## Architecture
+
+This document shows the planned cloud architecture for the Flight Analytics Data Lakehouse project. The pipeline is built fully on Microsoft Azure, with Azure Data Lake Storage Gen2 as the storage layer, Azure Synapse Analytics as the transformation layer, and Tableau as the reporting layer.
+
+High-Level Architecture
+```mermaid
+flowchart LR
+
+    %% =====================
+    %% SOURCE LAYER
+    %% =====================
+
+    subgraph SOURCE["Data Source"]
+        K["Kaggle Flight Status Dataset<br/>30M+ Records | 119 Columns"]
+    end
+
+    %% =====================
+    %% INGESTION
+    %% =====================
+
+    subgraph INGEST["Ingestion Layer"]
+        DL["Local Source Files<br/>Parquet + CSV"]
+    end
+
+    %% =====================
+    %% STORAGE
+    %% =====================
+
+    subgraph STORAGE["Azure Data Lake Storage Gen2"]
+        B["Bronze Layer<br/>Raw Source Data"]
+        S["Silver Layer<br/>Cleaned & Standardized Data"]
+        G["Gold Layer<br/>Analytics-Ready Data"]
+    end
+
+    %% =====================
+    %% PROCESSING
+    %% =====================
+
+    subgraph PROCESS["Data Processing & Transformation"]
+        P1["Azure Synapse Analytics<br/>Bronze → Silver"]
+        P2["Azure Databricks + PySpark<br/>Data Cleansing & Validation"]
+        P3["Azure Synapse Analytics<br/>Silver → Gold"]
+    end
+
+    %% =====================
+    %% DATA MODEL
+    %% =====================
+
+    subgraph MODEL["Dimensional Model"]
+        F1["fact_flights"]
+        D1["dim_airline"]
+        D2["dim_airport"]
+        D3["dim_route"]
+        D4["dim_date"]
+    end
+
+    %% =====================
+    %% ANALYTICS
+    %% =====================
+
+    subgraph BI["Business Intelligence"]
+        T["Tableau Dashboard"]
+    end
+
+    %% =====================
+    %% FLOW
+    %% =====================
+
+    K --> DL
+
+    DL --> B
+
+    B --> P1
+    P1 --> P2
+    P2 --> S
+
+    S --> P3
+    P3 --> G
+
+    G --> F1
+    G --> D1
+    G --> D2
+    G --> D3
+    G --> D4
+
+    F1 --> T
+    D1 --> T
+    D2 --> T
+    D3 --> T
+    D4 --> T
+
+    %% =====================
+    %% STYLING
+    %% =====================
+
+    style K fill:#374151,stroke:#6B7280,color:#FFFFFF
+    style DL fill:#374151,stroke:#6B7280,color:#FFFFFF
+
+    style B fill:#CD7F32,stroke:#E6A15C,color:#FFFFFF,stroke-width:3px
+
+    style S fill:#C0C0C0,stroke:#E5E7EB,color:#111111,stroke-width:3px
+
+    style G fill:#FFD700,stroke:#FFE55C,color:#111111,stroke-width:3px
+
+    style P1 fill:#7C3AED,stroke:#A78BFA,color:#FFFFFF,stroke-width:3px
+    style P2 fill:#7C3AED,stroke:#A78BFA,color:#FFFFFF,stroke-width:3px
+    style P3 fill:#7C3AED,stroke:#A78BFA,color:#FFFFFF,stroke-width:3px
+
+    style T fill:#F8FAFC,stroke:#E97627,color:#111111,stroke-width:3px
+
+    linkStyle default stroke:#A78BFA,stroke-width:2px
+```
 
 ## Business Questions
 
