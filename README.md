@@ -1,13 +1,9 @@
 # Flight Analytics Data Lakehouse
 
 ![Microsoft Azure](https://img.shields.io/badge/Microsoft_Azure-C8A2FF?style=flat&logo=microsoftazure&logoColor=white)
-
 ![SQL Server](https://img.shields.io/badge/SQL_Server-B7E4C7?style=flat&logo=microsoftsqlserver&logoColor=1B4332)
-
 ![PySpark](https://img.shields.io/badge/PySpark-FFB26B?style=flat&logo=apachespark&logoColor=D9480F)
-
 ![Tableau](https://img.shields.io/badge/Tableau-F5F5F5?style=flat&logo=tableau&logoColor=E97627)
-
 ![Status](https://img.shields.io/badge/status-in%20progress-orange)
 
 
