@@ -11,6 +11,36 @@ End-to-end data engineering and analytics project for building a cloud-based fli
 
 This project covers every aspect of working with data: **Data Engineering, Data Analysis and Data Visualization.**
 
+## Why?
+
+Most flight delay / prediction projects focus solely on dashboard creation or exploratory analysis. This project was built to go beyond visualization and replicate a production-style data engineering workflow on Microsoft Azure.
+
+The primary objectives were:
+
+- Design and implement an end-to-end cloud ETL pipeline using Azure.
+- Gain hands-on experience with Azure Data Lake Storage Gen2, Azure Synapse Analytics, and Azure Databricks.
+- Apply the Medallion Architecture (Bronze → Silver → Gold) for scalable data processing.
+- Transform raw aviation data into analytics-ready datasets using industry-standard data engineering practices.
+- Build a reporting layer capable of supporting business intelligence and operational decision-making.
+
+The project also explores several real-world business questions:
+
+- Which airports experience the highest delay rates?
+- Which airlines consistently achieve the best on-time performance?
+- What seasonal patterns exist in delays and cancellations?
+- Which flight routes are the least reliable?
+- What operational factors contribute most to flight delays?
+- How do airlines perform under varying traffic and congestion conditions?
+
+By combining cloud infrastructure, data engineering, and business intelligence, this project demonstrates how raw operational data can be transformed into actionable insights through a modern Azure-based analytics platform.
+
+This project was made to answer the following questions:
+- Which airports have the most flight delays?
+- Which airlines have the highest and lowest on-time performance?
+- What seasonal trends exist in delays and cancellations?
+- Which routes are the least reliable?
+- What factors have the strongest effect on flight delays?
+- Which airlines perform best under high-traffic conditions?
 
 The goal is to learn and demonstrate both sides of the workflow: reliable data engineering in Azure and practical data analysis through business KPIs.
 
