@@ -23,13 +23,29 @@ This repository documents a complete flight analytics pipeline:
 
 ```mermaid
 flowchart LR
-    A["Raw Dataset"] --> B["Bronze Layer (ADLS Gen2 Container)"]
-    B --> C["Azure Synapse Analytics / Azure Databricks"]
-    C --> D["Silver Layer: Nulls Handled, Tables Joined"]
-    D --> E["Gold Layer: Fact and Dimension Tables"]
-    E --> F["Tableau Dashboard"]
-```
+    A["Raw Dataset <br> (ADLS Gen2 Container)"]--> B["Bronze Layer: <br> Unstructured Data"]
+    B --> C["Silver Layer: <br> Transformations, Nulls Handled & Tables Joined"]
+    C --> D["Gold Layer: <br> Fact and Dimension Tables"]
+    D --> E["Tableau Dashboard"]
 
+    %% Raw Dataset
+    style A fill:#2D2D2D,stroke:#6B7280,stroke-width:2px,color:#FFFFFF
+
+    %% Bronze
+    style B fill:#CD7F32,stroke:#E6A15C,stroke-width:3px,color:#FFFFFF
+
+    %% Silver
+    style C fill:#C0C0C0,stroke:#E5E7EB,stroke-width:3px,color:#111111
+
+    %% Gold
+    style D fill:#FFD700,stroke:#FFE55C,stroke-width:3px,color:#111111
+
+    %% Tableau
+    style E fill:#F8FAFC,stroke:#E97627,stroke-width:3px,color:#111111
+
+    %% Arrows
+    linkStyle default stroke:#A78BFA,stroke-width:3px
+```
 ## Dataset
 
 The dataset is sourced from Kaggle: [Flight Status Prediction](https://www.kaggle.com/datasets/robikscube/flight-delay-dataset-20182022). It contains U.S. flight records from 2018 to 2022, including flight dates, airlines, origin and destination airports, scheduled and actual departure times, delay values, cancellations, diversions, route distance, and delay reason fields.
