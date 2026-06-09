@@ -1,4 +1,4 @@
-<img width="603" height="71" alt="{3F107372-D1D5-4D63-A229-BEE62DCC4496}" src="https://github.com/user-attachments/assets/0f92a08b-a2d5-441f-b549-da4a00d6265c" /># Flight Analytics Data Lakehouse
+# Flight Analytics Data Lakehouse
 
 ![Microsoft Azure](https://img.shields.io/badge/Microsoft_Azure-D8B4FE?style=flat&logo=icloud&logoColor=5B21B6)
 ![Database](https://img.shields.io/badge/SQL_Server-D1FAE5?style=flat&logo=databricks&logoColor=374151)
