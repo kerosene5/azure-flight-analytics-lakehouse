@@ -1,4 +1,4 @@
-# Flight Analytics Data Lakehouse
+<img width="603" height="71" alt="{3F107372-D1D5-4D63-A229-BEE62DCC4496}" src="https://github.com/user-attachments/assets/0f92a08b-a2d5-441f-b549-da4a00d6265c" /># Flight Analytics Data Lakehouse
 
 ![Microsoft Azure](https://img.shields.io/badge/Microsoft_Azure-D8B4FE?style=flat&logo=icloud&logoColor=5B21B6)
 ![Database](https://img.shields.io/badge/SQL_Server-D1FAE5?style=flat&logo=databricks&logoColor=374151)
@@ -6,20 +6,23 @@
 ![Tableau](https://img.shields.io/badge/Tableau-F8FAFC?style=flat&logo=plotly&logoColor=E97627)
 ![Status](https://img.shields.io/badge/Status-In_Progress-FED7AA?style=flat&logo=buffer&logoColor=C2410C)
 
-Production-style Azure Data Lakehouse project built on **30 million U.S. flight records** and **119 attributes**, designed to demonstrate modern cloud data engineering, data analytics, and business intelligence workflows on Microsoft Azure.
+A production-style Azure Data Lakehouse that transforms **30 million flight records** into trusted, analytics-ready datasets for business intelligence and operational reporting.
 
 The pipeline implements a **Medallion Architecture (Bronze → Silver → Gold)** using Azure Data Lake Storage Gen2, Azure Synapse Analytics (SQL Server), Azure Databricks (PySpark) to transform raw aviation data into analytics-ready fact and dimension models for KPI reporting and dashboarding.
 
-### Project Highlights
+### Key Metrics
 
-- **30,000,000+ flight records** processed
-- **119-column aviation dataset**
-- **Bronze → Silver → Gold** lakehouse architecture
-- **Azure-native ETL / ELT pipeline**
-- **Dimensional modeling** with fact and dimension tables
-- **Interactive Tableau dashboards** for business insights
+| Metric | Value |
+|---------|---------|
+| Records Processed | 30,000,000+ |
+| Dataset Columns | 119 |
+| Architecture | Medallion (Bronze → Silver → Gold) |
+| Cloud Platform | Microsoft Azure |
+| Processing Engine | Synapse Analytics + Databricks |
+| Visualization Layer | Tableau |
 
-This project demonstrates the complete data lifecycle—from raw data ingestion and transformation to analytical modeling, KPI development, and executive-level reporting.
+Built to mirror modern enterprise data platforms, this repository demonstrates cloud-native data engineering, dimensional modeling, analytics engineering, and dashboard development within a unified Azure ecosystem.
+
 
 ## Why?
 
