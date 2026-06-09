@@ -6,13 +6,20 @@
 ![Tableau](https://img.shields.io/badge/Tableau-F8FAFC?style=flat&logo=plotly&logoColor=E97627)
 ![Status](https://img.shields.io/badge/Status-In_Progress-FED7AA?style=flat&logo=buffer&logoColor=C2410C)
 
-Production-style Azure Data Lakehouse project built on 30 million flight records and 119 attributes from the U.S. Department of Transportation flight performance dataset.
+Production-style Azure Data Lakehouse project built on **30 million U.S. flight records** and **119 attributes**, designed to demonstrate modern cloud data engineering, data analytics, and business intelligence workflows on Microsoft Azure.
 
-The pipeline follows a Medallion Architecture (Bronze → Silver → Gold), transforming raw operational data into curated fact and dimension models for analytics, KPI tracking, and business intelligence reporting.
+The pipeline implements a **Medallion Architecture (Bronze → Silver → Gold)** using Azure Data Lake Storage Gen2, Azure Synapse Analytics (SQL Server), Azure Databricks (PySpark) to transform raw aviation data into analytics-ready fact and dimension models for KPI reporting and dashboarding.
 
-Technologies used include Azure Data Lake Storage Gen2, Azure Synapse Analytics, Azure Databricks, PySpark, SQL, and Tableau.
+### Project Highlights
 
-This project covers every aspect of working with data: **Data Engineering, Data Analysis and Data Visualization.**
+- **30,000,000+ flight records** processed
+- **119-column aviation dataset**
+- **Bronze → Silver → Gold** lakehouse architecture
+- **Azure-native ETL / ELT pipeline**
+- **Dimensional modeling** with fact and dimension tables
+- **Interactive Tableau dashboards** for business insights
+
+This project demonstrates the complete data lifecycle—from raw data ingestion and transformation to analytical modeling, KPI development, and executive-level reporting.
 
 ## Why?
 
