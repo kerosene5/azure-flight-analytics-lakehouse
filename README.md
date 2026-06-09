@@ -2,8 +2,6 @@
 
 ![Records](https://img.shields.io/badge/records-30M%2B-brightgreen)
 ![Status](https://img.shields.io/badge/status-in%20progress-orange)
-![Azure](https://img.shields.io/badge/cloud-Microsoft%20Azure-0078D4)
-![Tableau](https://img.shields.io/badge/dashboard-Tableau-E97627)
 
 End-to-end data engineering and analytics project for building a cloud-based flight performance lakehouse on Microsoft Azure. The project uses the Kaggle **Flight Status Prediction** dataset and follows a medallion architecture from raw ingestion to curated analytical outputs for Tableau dashboards.
 
@@ -30,7 +28,7 @@ flowchart LR
 
 ## Dataset
 
-The dataset is sourced from Kaggle: **Flight Status Prediction**. It contains U.S. flight records from 2018 to 2022, including flight dates, airlines, origin and destination airports, scheduled and actual departure times, delay values, cancellations, diversions, route distance, and delay reason fields.
+The dataset is sourced from Kaggle: [Flight Status Prediction](https://www.kaggle.com/datasets/robikscube/flight-delay-dataset-20182022). It contains U.S. flight records from 2018 to 2022, including flight dates, airlines, origin and destination airports, scheduled and actual departure times, delay values, cancellations, diversions, route distance, and delay reason fields.
 
 The source dataset is based on the U.S. Department of Transportation On-Time Performance data. For this project, the working files are yearly Parquet files plus an airline lookup table.
 
