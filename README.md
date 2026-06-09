@@ -11,17 +11,17 @@ The goal is to learn and demonstrate both sides of the workflow: reliable data e
 
 This repository documents a complete flight analytics pipeline:
 
-1. Ingest raw flight files into Azure Data Lake Storage Gen2.
-2. Store source data in a Bronze layer without changing its original structure.
-3. Use Azure Synapse Analytics to clean, standardize, and transform Bronze data into Silver.
-4. Build Gold-layer fact and dimension tables for reporting.
-5. Use the Gold layer as the analytics-ready source for Tableau dashboards.
+1. Ingest **raw flight files** into Azure Data Lake Storage Gen2 (ADLS Gen2).
+2. Store source data in a **Bronze** layer without changing its original structure.
+3. Use Azure Synapse Analytics / Azure Databricks to clean, standardize, and transform Bronze data into **Silver**.
+4. Build **Gold-layer** fact and dimension tables for reporting KPIs.
+5. Use the Gold layer as the analytics-ready source for Tableau **visualizations** and **dashboards.**
 
 ```mermaid
 flowchart LR
-    A["Kaggle Flight Status Prediction Dataset"] --> B["ADLS Gen2 Bronze Container"]
-    B --> C["Azure Synapse Analytics"]
-    C --> D["ADLS Gen2 Silver Container"]
+    A["Raw Dataset"] --> B["Bronze Layer (ADLS Gen2 Container)"]
+    B --> C["Azure Synapse Analytics / Azure Databricks"]
+    C --> D["Silver Layer: Nulls Handled, Tables Joined"]
     D --> E["Gold Layer: Fact and Dimension Tables"]
     E --> F["Tableau Dashboard"]
 ```
