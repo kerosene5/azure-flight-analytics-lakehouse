@@ -50,6 +50,10 @@ This project covers the entire data workflow: **Data Engineering, Data Analysis 
 - [Repository Structure](#repository-structure)
 - [Project Status](#project-status)
 
+## Architecture
+
+
+
 ## Why?
 
 Most flight delay / prediction projects focus solely on dashboard creation or exploratory analysis. This project was built to go beyond visualization and replicate a production-style data engineering workflow on Microsoft Azure.
