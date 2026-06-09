@@ -10,6 +10,9 @@ A production-style Azure Data Lakehouse that transforms **30 million flight reco
 
 The pipeline implements a **Medallion Architecture (Bronze → Silver → Gold)** using Azure Data Lake Storage Gen2, Azure Synapse Analytics (SQL Server), Azure Databricks (PySpark) to transform raw aviation data into analytics-ready fact and dimension models for KPI reporting and dashboarding.
 
+
+This project covers the entire data workflow: **Data Engineering, Data Analysis and Data Visualization.**
+
 ### Key Metrics
 
 | Metric | Value |
@@ -20,9 +23,6 @@ The pipeline implements a **Medallion Architecture (Bronze → Silver → Gold)*
 | Cloud Platform | Microsoft Azure |
 | Processing Engine | Synapse Analytics + Databricks |
 | Visualization Layer | Tableau |
-
-
-This project covers the entire data workflow: **Data Engineering, Data Analysis and Data Visualization.**
 
 
 ## Why?
