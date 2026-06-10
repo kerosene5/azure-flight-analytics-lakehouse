@@ -55,19 +55,22 @@ Most flight delay / prediction projects focus solely on dashboard creation or ex
 
 The primary objectives were:
 
-- Design and implement an end-to-end cloud ETL pipeline using Azure.
+- Design and implement an **end-to-end cloud ETL pipeline** using Azure.
 - Gain hands-on experience with Azure Data Lake Storage Gen2, Azure Synapse Analytics, and Azure Databricks.
-- Apply the Medallion Architecture (Bronze → Silver → Gold) for scalable data processing.
-- Transform raw aviation data into analytics-ready datasets using industry-standard data engineering practices.
+- Apply the **Medallion Architecture** (Bronze → Silver → Gold) for scalable data processing.
+- Transform raw aviation data into operational and analytics-ready data using industry-standard data engineering practices.
 - Build a reporting layer capable of supporting business intelligence and operational decision-making.
 
 The goal is to learn and demonstrate both sides of the workflow: reliable data engineering in Azure and practical data analysis / visualization of business KPIs in Tableau.
 
 ## Architecture
 
-This document shows the planned cloud architecture for the Flight Analytics Data Lakehouse project. The pipeline is built fully on Microsoft Azure, with Azure Data Lake Storage Gen2 as the storage layer, Azure Synapse Analytics as the transformation layer, and Tableau as the reporting layer.
+This section shows the planned cloud architecture for the Flight Analytics Data Lakehouse project. The pipeline is built fully on Microsoft Azure, with Azure Data Lake Storage Gen2 as the storage layer, Azure Synapse Analytics / Azure Databricks as the transformation layer, and Tableau as the reporting layer.
 
-High-Level Architecture
+<br>
+
+<h3 align="center">Architecture Diagram</h3>
+
 ```mermaid
 flowchart LR
 
@@ -174,6 +177,46 @@ flowchart LR
     style T fill:#F8FAFC,stroke:#E97627,color:#111111,stroke-width:3px
 
     linkStyle default stroke:#A78BFA,stroke-width:2px
+```
+<br>
+
+<br>
+
+---
+
+### WorkFlow
+
+The repository implements the following process for building the ETL / ELT pipeline, and the Dashboard afterwards:
+1. Ingest **raw flight files** into Azure Data Lake Storage Gen2 (ADLS Gen2).
+2. Store source data in a **Bronze** layer without changing its original structure.
+3. Use Azure Synapse Analytics / Azure Databricks to clean, standardize, and transform Bronze data into **Silver**.
+4. Build **Gold-layer** fact and dimension tables for reporting KPIs.
+5. Use the Gold layer as the analytics-ready source for Tableau **visualizations** and **dashboards.**
+
+```mermaid
+flowchart LR
+    A["Raw Dataset <br> (ADLS Gen2 Container)"]--> B["Bronze Layer: <br> Unstructured Data"]
+    B --> C["Silver Layer: <br> Transformations, Nulls & Joins"]
+    C --> D["Gold Layer: <br> Fact and Dimension Tables"]
+    D --> E["Tableau Dashboard"]
+
+    %% Raw Dataset
+    style A fill:#2D2D2D,stroke:#6B7280,stroke-width:2px,color:#FFFFFF
+
+    %% Bronze
+    style B fill:#CD7F32,stroke:#E6A15C,stroke-width:3px,color:#FFFFFF
+
+    %% Silver
+    style C fill:#C0C0C0,stroke:#E5E7EB,stroke-width:3px,color:#111111
+
+    %% Gold
+    style D fill:#FFD700,stroke:#FFE55C,stroke-width:3px,color:#111111
+
+    %% Tableau
+    style E fill:#F8FAFC,stroke:#E97627,stroke-width:3px,color:#111111
+
+    %% Arrows
+    linkStyle default stroke:#A78BFA,stroke-width:3px
 ```
 
 ## Business Questions
