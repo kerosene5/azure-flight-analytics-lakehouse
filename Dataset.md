@@ -19,7 +19,7 @@ The dataset contains detailed operational records for domestic U.S. flights betw
 
 ## Source
 
-**Kaggle Dataset**
+**Kaggle Dataset:**
 
 https://www.kaggle.com/datasets/robikscube/flight-delay-dataset-20182022
 
@@ -27,9 +27,9 @@ The source data originates from the U.S. Department of Transportation's On-Time 
 
 <br>
 
-## Files Used
+## Files
 
-The project uses yearly flight records and an airline lookup table.
+The dataset contains yearly flight records and an airline lookup table.
 
 | File                            | Description                           |
 | ------------------------------- | ------------------------------------- |
@@ -40,86 +40,10 @@ The project uses yearly flight records and an airline lookup table.
 | `Combined_Flights_2022.parquet` | Flight records for 2022               |
 | `Airlines.csv`                  | Airline code and airline name mapping |
 
----
 
-## Data Domains
+<br>
 
-The 119 columns can be grouped into the following analytical domains:
-
-| Domain                  | Examples                                |
-| ----------------------- | --------------------------------------- |
-| Flight Information      | Flight Number, Flight Date, Tail Number |
-| Airline Information     | Marketing Airline, Operating Airline    |
-| Airport Information     | Origin Airport, Destination Airport     |
-| Geographic Data         | City, State, Market IDs                 |
-| Schedule Information    | Scheduled Departure & Arrival Times     |
-| Operational Performance | Actual Departure & Arrival Times        |
-| Delay Metrics           | Departure Delay, Arrival Delay          |
-| Cancellation Data       | Cancelled Flag, Cancellation Reason     |
-| Diversion Data          | Diversion Status, Diversion Airports    |
-| Route Information       | Distance, Distance Groups               |
-
----
-
-## Key Columns
-
-The analytics layer focuses on a subset of business-critical attributes.
-
-| Column              | Description                       |
-| ------------------- | --------------------------------- |
-| `FlightDate`        | Flight date                       |
-| `Operating_Airline` | Operating carrier                 |
-| `Origin`            | Origin airport                    |
-| `Dest`              | Destination airport               |
-| `Cancelled`         | Cancellation indicator            |
-| `Diverted`          | Diversion indicator               |
-| `DepDelayMinutes`   | Departure delay in minutes        |
-| `ArrDelayMinutes`   | Arrival delay in minutes          |
-| `Distance`          | Route distance                    |
-| `CarrierDelay`      | Carrier-related delay             |
-| `WeatherDelay`      | Weather-related delay             |
-| `NASDelay`          | National Airspace System delay    |
-| `SecurityDelay`     | Security-related delay            |
-| `LateAircraftDelay` | Delay caused by incoming aircraft |
-
----
-
-## Analytical Use Cases
-
-This dataset supports several business and operational analyses:
-
-* Airline reliability analysis
-* Airport performance benchmarking
-* Route performance evaluation
-* Delay attribution analysis
-* Seasonal travel trend analysis
-* Cancellation and diversion monitoring
-* KPI development and dashboard reporting
-
----
-
-## Data Quality Considerations
-
-Several characteristics of the source data require attention during transformation:
-
-* Missing values across operational timing fields
-* Null delay metrics for cancelled flights
-* Null arrival metrics for diverted flights
-* Time fields stored as HHMM integers
-* Multiple airline identifiers for the same carrier
-* Large schema width (119 columns) requiring selective modeling
-
-These issues are addressed during Bronze → Silver transformations within the lakehouse pipeline.
-
----
-
-## Schema Reference
-
-The complete source schema contains **119 columns** covering flight operations, airlines, airports, scheduling, delays, cancellations, diversions, and route information.
-
-For the full record layout, refer to the original dataset documentation provided with the source data.
-
-# RECORD LAYOUT
+## Record Layout
 
 Below are fields in the order that they appear on the records:
 
