@@ -107,7 +107,7 @@ flowchart LR
     %% =====================
 
     subgraph PROCESS["Data Processing & Transformation (ETL Pipeline)"]
-        P1["Azure Synapse Analytics<br/>Bronze → Silver"]
+        P1["Azure Databricks<br/>Bronze → Silver"]
         P2["Azure Databricks (PySpark)<br/>Data Cleansing & Validation"]
         P3["Azure Synapse Analytics<br/>Silver → Gold"]
     end
