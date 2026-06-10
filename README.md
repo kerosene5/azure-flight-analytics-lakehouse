@@ -32,7 +32,7 @@ This project covers the entire data workflow: **Data Engineering, Data Analysis 
   - [Workflow](#workflow)
 - [Business Questions](#business-questions)
   - [KPIs](#kpis)
-  - [KPI Definitions / Formulas](#kpi-definitions-/-formulas)
+  - [KPI Definitions / Formulas](#kpi-definitions-&-formulas)
 - [Dataset](#dataset)
 - [Azure Setup](#current-azure-setup)
 - [Medallion Architecture](#medallion-architecture)
@@ -251,7 +251,7 @@ The following *KPIs (Key Performance Indicators)* are used:
 
 ----
 
-### KPI Definitions / Formulas
+### KPI Definitions & Formulas
 
 * **On-Time Performance (OTP)** = (Flights delayed < 15 minutes) / Total completed flights
 * **Average Departure Delay** = Average of `DepDelayMinutes`
