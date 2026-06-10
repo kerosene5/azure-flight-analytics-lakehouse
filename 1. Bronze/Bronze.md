@@ -6,18 +6,7 @@ Its primary responsibility is to store source data exactly as received, without 
 
 In a *Medallion Architecture*, the Bronze layer acts as the system of record and provides a reliable foundation for all downstream processing.
 
-
-## Aim
-
-The Bronze layer was designed to:
-
-1. Preserve source data integrity.
-2. Maintain a reproducible ingestion process.
-3. Separate raw data from transformed datasets.
-4. Support downstream Silver-layer transformations.
-5. Enable future reprocessing without re-downloading source files.
-
-## Azure Implementation
+## Implementation
 
 The Bronze layer is implemented using Azure Data Lake Storage Gen2 (ADLS Gen2).
 
