@@ -43,17 +43,26 @@ No transformations, filtering, joins, or data quality operations are performed w
 
 The ingestion workflow follows a simple raw-load pattern:
 
-```text
-Kaggle Dataset
-        │
-        ▼
-Local Extract
-        │
-        ▼
-Azure Data Lake Storage Gen2
-        │
-        ▼
-Bronze Container
+```mermaid
+flowchart TB
+
+    K["Kaggle Dataset"]
+    L["Local Extract<br/>Parquet + CSV"]
+    A["Azure Data Lake Storage Gen2"]
+    B["Bronze Container<br/>Raw Source Data"]
+
+    K --> L
+    L --> A
+    A --> B
+
+    style K fill:#374151,stroke:#6B7280,color:#FFFFFF
+    style L fill:#374151,stroke:#6B7280,color:#FFFFFF
+
+    style A fill:#D8B4FE,stroke:#A78BFA,color:#111111,stroke-width:3px
+
+    style B fill:#CD7F32,stroke:#E6A15C,color:#FFFFFF,stroke-width:3px
+
+    linkStyle default stroke:#A78BFA,stroke-width:2px
 ```
 
 ## Design Decisions
