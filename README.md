@@ -232,40 +232,6 @@ The project also explores several real-world business questions:
 - What operational factors contribute most to flight delays?
 - How do airlines perform under varying traffic and congestion conditions?
 
-## Scope
-
-The repository implements the following process for building the ETL / ELT pipeline, and the Dashboard afterwards:
-1. Ingest **raw flight files** into Azure Data Lake Storage Gen2 (ADLS Gen2).
-2. Store source data in a **Bronze** layer without changing its original structure.
-3. Use Azure Synapse Analytics / Azure Databricks to clean, standardize, and transform Bronze data into **Silver**.
-4. Build **Gold-layer** fact and dimension tables for reporting KPIs.
-5. Use the Gold layer as the analytics-ready source for Tableau **visualizations** and **dashboards.**
-
-```mermaid
-flowchart LR
-    A["Raw Dataset <br> (ADLS Gen2 Container)"]--> B["Bronze Layer: <br> Unstructured Data"]
-    B --> C["Silver Layer: <br> Transformations, Nulls & Joins"]
-    C --> D["Gold Layer: <br> Fact and Dimension Tables"]
-    D --> E["Tableau Dashboard"]
-
-    %% Raw Dataset
-    style A fill:#2D2D2D,stroke:#6B7280,stroke-width:2px,color:#FFFFFF
-
-    %% Bronze
-    style B fill:#CD7F32,stroke:#E6A15C,stroke-width:3px,color:#FFFFFF
-
-    %% Silver
-    style C fill:#C0C0C0,stroke:#E5E7EB,stroke-width:3px,color:#111111
-
-    %% Gold
-    style D fill:#FFD700,stroke:#FFE55C,stroke-width:3px,color:#111111
-
-    %% Tableau
-    style E fill:#F8FAFC,stroke:#E97627,stroke-width:3px,color:#111111
-
-    %% Arrows
-    linkStyle default stroke:#A78BFA,stroke-width:3px
-```
 ## Dataset
 
 The dataset is sourced from Kaggle: [Flight Status Prediction](https://www.kaggle.com/datasets/robikscube/flight-delay-dataset-20182022). It contains U.S. flight records from 2018 to 2022, including flight dates, airlines, origin and destination airports, scheduled and actual departure times, delay values, cancellations, diversions, route distance, and delay reason fields.
