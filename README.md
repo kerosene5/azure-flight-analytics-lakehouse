@@ -223,14 +223,34 @@ flowchart LR
 
 ## Business Questions
 
-The project also explores several real-world business questions:
+The project aims to explore & solve several real-world business questions from our dataset, within our *reporting* layer:
 
 - Which airports experience the highest delay rates?
-- Which airlines consistently achieve the best on-time performance?
+- Which airlines consistently achieve the best on-time performance (OTP)?
 - What seasonal trends exist in delays and cancellations?
 - Which flight routes are the least reliable?
 - What operational factors contribute most to flight delays?
 - How do airlines perform under varying traffic and congestion conditions?
+
+## KPI Plan
+
+| KPI Area | Metrics |
+| --- | --- |
+| Overall performance | Total flights, on-time performance, average departure delay |
+| Disruption tracking | Cancellation rate, diversion rate |
+| Airline analysis | Best and worst airlines, delay segmentation, reliability score |
+| Airport analysis | Most delayed airports, most reliable airports, congestion index |
+| Route analysis | Worst routes, route reliability |
+| Time analysis | Delay by day, month, and season |
+
+Example KPI definitions:
+
+- **On-Time Performance (OTP):** flights delayed less than 15 minutes divided by total flights.
+- **Average Departure Delay:** average of `DepDelayMinutes`.
+- **Cancellation Rate:** cancelled flights divided by total flights.
+- **Diversion Rate:** diverted flights divided by total flights.
+- **Airport Congestion Index:** flights per day multiplied by average delay.
+
 
 ## Dataset
 
