@@ -28,6 +28,8 @@ This project covers the entire data workflow: **Data Engineering, Data Analysis 
 - [Features](#features)
 - [Why?](#why)
 - [Architecture](#architecture)
+  - [Diagram](#architecture-diagram)
+  - [Workflow](#workflow)
 - [Business Questions](#business-questions)
 - [Dataset](#dataset)
 - [Azure Setup](#current-azure-setup)
@@ -42,7 +44,7 @@ This project covers the entire data workflow: **Data Engineering, Data Analysis 
 ## Features
 
 - Implements a Medallion Architecture (Bronze → Silver → Gold) on Microsoft Azure.
-- Processes 30M+ flight records and 119 attributes from the U.S. Department of Transportation dataset [(link)](https://www.kaggle.com/datasets/robikscube/flight-delay-dataset-20182022?select=readme.md)
+- Processes 30M+ flight records and 119 attributes from the U.S. Department of Transportation dataset [(link)](https://www.kaggle.com/datasets/robikscube/flight-delay-dataset-20182022?select=readme.md).
 - Builds a cloud-native ETL / ELT pipeline using Azure Data Lake Storage Gen2, Synapse Analytics, and Databricks.
 - Transforms raw aviation data into analytics-ready datasets through cleansing, standardization, and enrichment.
 - Designs fact and dimension tables optimized for reporting and KPI analysis.
@@ -51,7 +53,7 @@ This project covers the entire data workflow: **Data Engineering, Data Analysis 
 
 ## Why?
 
-Most flight delay / prediction projects focus solely on dashboard creation or exploratory analysis. This project was built to go beyond visualization and replicate a production-style data engineering workflow on Microsoft Azure.
+Most flight delay / prediction projects focus solely on dashboard creation or exploratory analysis. This project was built to go *beyond* visualization and replicate a production-style data engineering workflow on Microsoft Azure.
 
 The primary objectives were:
 
@@ -65,7 +67,7 @@ The goal is to learn and demonstrate both sides of the workflow: reliable data e
 
 ## Architecture
 
-This section shows the planned cloud architecture for the Flight Analytics Data Lakehouse project. The pipeline is built fully on Microsoft Azure, with Azure Data Lake Storage Gen2 as the storage layer, Azure Synapse Analytics / Azure Databricks as the transformation layer, and Tableau as the reporting layer.
+This section shows the planned cloud architecture and workflow for the Flight Analytics Data Lakehouse project. The pipeline is built fully on Microsoft Azure, with Azure Data Lake Storage Gen2 as the *storage* layer, Azure Synapse Analytics / Azure Databricks as the *transformation* layer, and Tableau as the *reporting* layer.
 
 <br>
 
