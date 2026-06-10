@@ -32,7 +32,7 @@ This project covers the entire data workflow: **Data Engineering, Data Analysis 
   - [Workflow](#workflow)
 - [Business Questions](#business-questions)
   - [KPIs](#kpis)
-  - [KPI Definitions / Formulas](#kpi-definitions-&-formulas)
+  - [KPI Definitions & Formulas](#kpi-definitions--formulas)
 - [Dataset](#dataset)
 - [Azure Setup](#current-azure-setup)
 - [Medallion Architecture](#medallion-architecture)
