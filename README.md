@@ -251,8 +251,8 @@ The following *KPIs (Key Performance Indicators)* are used:
 * **On-Time Performance (OTP)** = (Flights delayed < 15 minutes) / Total completed flights
 * **Average Departure Delay** = Average of `DepDelayMinutes`
 * **Average Arrival Delay** = Average of `ArrDelayMinutes`
-* **Cancellation Rate** = `Cancelled` flights ÷ Total flights
-* **Diversion Rate** = `Diverted` flights ÷ Total flights
+* **Cancellation Rate** = `Cancelled` flights / Total flights
+* **Diversion Rate** = `Diverted` flights / Total flights
 * **Airport Congestion Index** = Flight volume × Average `Delay`
 * **Route Reliability Score** = Route (`Origin` + `Destination` Pair) OTP adjusted for cancellations and diversions
 
