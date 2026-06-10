@@ -4,7 +4,7 @@ The Bronze layer serves as the raw *ingestion* zone of the Flight Analytics Data
 
 Its primary responsibility is to store source data exactly as received, without applying business logic, transformations, or enrichment. This ensures that the original dataset remains available for auditing, reprocessing, and recovery purposes throughout the lifecycle of the project.
 
-In a Medallion Architecture, the Bronze layer acts as the system of record and provides a reliable foundation for all downstream processing.
+In a *Medallion Architecture*, the Bronze layer acts as the system of record and provides a reliable foundation for all downstream processing.
 
 
 ## Aim
@@ -16,7 +16,6 @@ The Bronze layer was designed to:
 3. Separate raw data from transformed datasets.
 4. Support downstream Silver-layer transformations.
 5. Enable future reprocessing without re-downloading source files.
-
 
 ## Azure Implementation
 
