@@ -53,31 +53,3 @@ flowchart TB
 
     linkStyle default stroke:#A78BFA,stroke-width:2px
 ```
-
-## Design Decisions
-
-### Why Store Raw Data?
-
-Keeping raw data unchanged provides several benefits:
-
-* Full traceability to the original source
-* Ability to replay transformations
-* Easier debugging of downstream issues
-* Protection against accidental data loss
-* Consistent input for future pipeline executions
-
-### Why ADLS Gen2?
-
-Azure Data Lake Storage Gen2 was selected because it provides:
-
-* Scalable cloud storage
-* Native integration with Synapse Analytics
-* Native integration with Databricks
-* Hierarchical namespace support
-* Cost-effective storage for large datasets
-
-
-All Silver-layer transformations read directly from the Bronze container, where schemas are standardized, data quality issues are addressed, and tables are merged / joined.
-
-The Bronze layer itself remains immutable and serves as the authoritative copy of the source data.
-
