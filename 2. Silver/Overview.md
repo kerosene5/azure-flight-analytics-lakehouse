@@ -1,11 +1,5 @@
 # Silver Layer
 
-Yeah, the current version reads like a university report. For a GitHub project, especially one you're trying to position as a standout data engineering project, you want it to sound more like something an engineer actually wrote.
-
----
-
-# Silver Layer
-
 The Silver layer contains cleaned, standardized, and enriched flight data.
 
 Raw datasets from the Bronze layer are processed using Azure Databricks and PySpark to improve data quality and create a consistent dataset for downstream analytics.
@@ -27,31 +21,6 @@ Silver Container
     ├── part-00002.parquet
     └── ...
 ```
-
-## Transformations
-
-### Data Consolidation
-
-* Loaded all yearly flight datasets from the Bronze layer.
-* Combined them into a single unified dataset.
-
-### Data Cleaning
-
-* Removed duplicate records.
-* Standardized column names.
-* Trimmed inconsistent string values.
-* Handled missing and invalid data.
-
-### Schema Standardization
-
-* Enforced a consistent schema across all years.
-* Converted columns to appropriate data types.
-* Prepared fields for analytical workloads.
-
-### Data Enrichment
-
-* Joined flight records with airline reference data.
-* Added airline names alongside airline codes.
 
 ## Workflow
 
