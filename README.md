@@ -272,6 +272,14 @@ The following *KPIs (Key Performance Indicators)* are used:
 
 <img width="868" height="231" alt="{F5BF66F8-939A-43AA-B9F8-876BF765A870}" src="https://github.com/user-attachments/assets/9d090575-d54f-4c9d-baa4-828c3a3d16f1" />
 
+----
+
+2. Upload the dataset from your local file store to the *landing* container in the cloud.
+
+<img width="1018" height="313" alt="{B077538E-911F-447B-B57D-E83880DB1E68}" src="https://github.com/user-attachments/assets/351c9a0c-ea25-4ec5-a70a-adc2946f2775" />
+
+----
+
 
 ### Repository Structure
 
