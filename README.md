@@ -286,12 +286,23 @@ The following *KPIs (Key Performance Indicators)* are used:
 
 ----
 
-4. Create *Source* and *Sink* datasets for the pipeline.
+4. Create *Source* and *Sink* datasets for the pipeline. The Source dataset has it's filepath set as the directory of the **landing** container, while the sink dataset's filepath is set as the **bronze** container.
 
-<img width="743" height="131" alt="{24584F7E-F6A7-4DA4-92F1-0FE05DE253C7}" src="https://github.com/user-attachments/assets/dd036510-e3be-4271-8a50-9802f735683c" />
+<img width="737" height="133" alt="{A65BC946-8B02-40D5-94B3-F5FB30A0AE47}" src="https://github.com/user-attachments/assets/0f504020-69ed-4758-a91d-a5206a06a685" />
 
-<img width="731" height="129" alt="{19475413-A5C5-48D9-8563-B6B18D41C637}" src="https://github.com/user-attachments/assets/ca65a8e3-574c-4b10-84c6-fb4489165f99" />
 
+
+<img width="735" height="136" alt="{D0BBBCD2-2482-48BB-9C7C-CDEEA1153997}" src="https://github.com/user-attachments/assets/459eceee-57ea-44d2-ab08-a620d828737b" />
+
+----
+
+5. Configure our pipeline and validate it.
+
+<img width="500" height="296" alt="{F9A9735D-A687-4F64-A4D4-9CEB6663EED2}" src="https://github.com/user-attachments/assets/f2a8c62e-b3bc-41b5-9647-30b321cb685c" />
+
+<img width="828" height="204" alt="{D298FFFF-AC1E-4C7E-9FE1-88A79F77C053}" src="https://github.com/user-attachments/assets/b9198b34-81df-4135-a685-06e4b131b9b8" />
+
+----
 
 ### Repository Structure
 
