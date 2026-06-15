@@ -282,7 +282,7 @@ The following *KPIs (Key Performance Indicators)* are used:
 
 3. In Azure Data Factory, create a **Linked Service** connecting our storage accounts to our data factory. 
 
-<img width="442" height="260" alt="{9D7EAE44-7888-46FA-A0C3-F327E7B41356}" src="https://github.com/user-attachments/assets/74f66c8b-7ee4-4804-8205-9f44fd46af4f" />
+<img width="435" height="258" alt="{00701EA4-5352-4D8B-A31D-216D4CD9A68F}" src="https://github.com/user-attachments/assets/70831f3e-ada1-418f-988c-d0ed07a393dd" />
 
 ----
 
