@@ -266,9 +266,12 @@ The following *KPIs (Key Performance Indicators)* are used:
 
 ## Project Overview
 
-### Roadmap
+### Steps 
 
-ayo
+1. Build storage containers for **each** layer (an extra container named *landing* is used to facilitate the data ingestion pipeline, as well as imitate a file store)
+
+<img width="868" height="231" alt="{F5BF66F8-939A-43AA-B9F8-876BF765A870}" src="https://github.com/user-attachments/assets/9d090575-d54f-4c9d-baa4-828c3a3d16f1" />
+
 
 ### Repository Structure
 
