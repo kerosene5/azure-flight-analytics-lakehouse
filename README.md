@@ -1,4 +1,4 @@
-# Flight Analytics Data Lakehouse
+# Azure Flight Analytics Data Lakehouse
 
 ![Microsoft Azure](https://img.shields.io/badge/Microsoft_Azure-D8B4FE?style=flat&logo=icloud&logoColor=5B21B6)
 ![Database](https://img.shields.io/badge/SQL_Server-D1FAE5?style=flat&logo=databricks&logoColor=374151)
