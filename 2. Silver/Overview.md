@@ -49,13 +49,3 @@ flowchart TB
 
     linkStyle default stroke:#A78BFA,stroke-width:2px
 ```
-
-## Purpose
-
-The Silver layer provides a reliable dataset for the Gold layer.
-
-By resolving data quality issues early in the pipeline, downstream transformations can focus on analytics, KPI generation, dimensional modeling, and reporting instead of data preparation.
-
----
-
-This style is much closer to how high-starred data engineering repositories write documentation: short paragraphs, concrete actions, minimal buzzwords, and letting the architecture speak for itself.
