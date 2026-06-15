@@ -56,8 +56,7 @@ The primary objectives were:
 1. Design and implement an **end-to-end cloud ETL pipeline** using Azure.
 2. Gain hands-on experience with Azure Data Lake Storage Gen2, Azure Synapse Analytics, and Azure Databricks.
 3. Apply the **Medallion Architecture** (Bronze → Silver → Gold) for scalable data processing.
-4. Transform raw aviation data into operational and analytics-ready data using industry-standard data engineering practices.
-5. Build a reporting layer capable of supporting business intelligence and operational decision-making.
+4. Build a reporting layer capable of supporting business intelligence and operational decision-making.
 
 The goal is to learn and demonstrate both sides of the workflow: reliable data engineering in Azure and practical data analysis / visualization of business KPIs in Tableau.
 
