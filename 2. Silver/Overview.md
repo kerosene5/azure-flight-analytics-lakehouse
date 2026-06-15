@@ -1,16 +1,20 @@
 # Silver Layer
 
-The Silver layer serves as the *cleansed and standardized* zone of the Flight Analytics Data Lakehouse.
+Yeah, the current version reads like a university report. For a GitHub project, especially one you're trying to position as a standout data engineering project, you want it to sound more like something an engineer actually wrote.
 
-Its primary responsibility is to improve the quality of the raw Bronze data by applying data cleansing, validation, standardization, and enrichment operations. This layer transforms raw source files into a trusted and consistent dataset suitable for downstream analytics and dimensional modeling.
+---
 
-In a *Medallion Architecture*, the Silver layer acts as the refined data layer between raw ingestion and business-ready reporting.
+# Silver Layer
+
+The Silver layer contains cleaned, standardized, and enriched flight data.
+
+Raw datasets from the Bronze layer are processed using Azure Databricks and PySpark to improve data quality and create a consistent dataset for downstream analytics.
+
+This layer serves as the bridge between raw ingestion and business-ready data.
 
 ## Implementation
 
-The Silver layer is implemented using Azure Databricks and PySpark.
-
-Data is read from the Bronze container, transformed through a series of data quality operations, and then written back to Azure Data Lake Storage Gen2 in Parquet format.
+Data is read from the Bronze container, transformed using PySpark, and written back to Azure Data Lake Storage Gen2 in Parquet format.
 
 ### Storage Structure
 
@@ -24,51 +28,43 @@ Silver Container
     └── ...
 ```
 
-The Silver dataset contains standardized flight records that have passed validation and cleansing rules.
+## Transformations
 
-## Transformation Process
+### Data Consolidation
 
-The following operations were performed during the Bronze → Silver transformation:
+* Loaded all yearly flight datasets from the Bronze layer.
+* Combined them into a single unified dataset.
 
-### Data Cleansing
+### Data Cleaning
 
-- Removed duplicate flight records.
-- Standardized column naming conventions.
-- Trimmed and normalized string values.
-- Handled invalid or inconsistent records.
+* Removed duplicate records.
+* Standardized column names.
+* Trimmed inconsistent string values.
+* Handled missing and invalid data.
 
-### Data Quality
+### Schema Standardization
 
-- Replaced or handled missing values where appropriate.
-- Validated critical flight attributes.
-- Ensured schema consistency across all yearly datasets.
+* Enforced a consistent schema across all years.
+* Converted columns to appropriate data types.
+* Prepared fields for analytical workloads.
 
-### Standardization
+### Data Enrichment
 
-- Unified data formats across all source files.
-- Converted columns into appropriate data types.
-- Prepared fields for downstream KPI calculations and dimensional modeling.
-
-### Enrichment
-
-- Combined yearly flight datasets into a single consolidated dataset.
-- Joined airline reference information from `Airlines.csv`.
-- Added business-friendly airline names alongside airline codes.
+* Joined flight records with airline reference data.
+* Added airline names alongside airline codes.
 
 ## Workflow
-
-The Silver layer is generated through an Azure Databricks transformation pipeline.
 
 ```mermaid
 flowchart TB
 
     B["Bronze Container<br/>Raw Flight Data"]
 
-    D["Azure Databricks<br/>PySpark Processing"]
+    D["Azure Databricks<br/>PySpark"]
 
-    T["Data Cleansing<br/>Validation<br/>Standardization"]
+    T["Clean, Standardize<br/>Enrich"]
 
-    S["Silver Container<br/>Trusted & Refined Data"]
+    S["Silver Container<br/>Refined Flight Data"]
 
     B --> D
     D --> T
@@ -85,10 +81,12 @@ flowchart TB
     linkStyle default stroke:#A78BFA,stroke-width:2px
 ```
 
-## Role in the Data Lakehouse
+## Purpose
 
-The Silver layer provides a trusted foundation for analytical processing.
+The Silver layer provides a reliable dataset for the Gold layer.
 
-By ensuring data quality and consistency at this stage, downstream Gold-layer transformations can focus on business logic, KPI generation, fact tables, and dimension tables rather than raw data preparation.
+By resolving data quality issues early in the pipeline, downstream transformations can focus on analytics, KPI generation, dimensional modeling, and reporting instead of data preparation.
 
-This separation improves maintainability, scalability, and reliability throughout the analytics pipeline.
+---
+
+This style is much closer to how high-starred data engineering repositories write documentation: short paragraphs, concrete actions, minimal buzzwords, and letting the architecture speak for itself.
