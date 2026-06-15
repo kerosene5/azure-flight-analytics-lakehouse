@@ -296,9 +296,13 @@ The following *KPIs (Key Performance Indicators)* are used:
 
 ----
 
-5. Configure our pipeline and validate it.
+5. Configure our pipeline, set our sink and source datasets we created earlier.
 
 <img width="500" height="296" alt="{F9A9735D-A687-4F64-A4D4-9CEB6663EED2}" src="https://github.com/user-attachments/assets/f2a8c62e-b3bc-41b5-9647-30b321cb685c" />
+
+----
+
+6. Validate our pipeline and trigger a run.
 
 <img width="828" height="204" alt="{D298FFFF-AC1E-4C7E-9FE1-88A79F77C053}" src="https://github.com/user-attachments/assets/b9198b34-81df-4135-a685-06e4b131b9b8" />
 
