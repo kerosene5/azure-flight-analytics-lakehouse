@@ -280,6 +280,18 @@ The following *KPIs (Key Performance Indicators)* are used:
 
 ----
 
+3. In Azure Data Factory, create a **Linked Service** connecting our storage accounts to our data factory. 
+
+<img width="442" height="260" alt="{9D7EAE44-7888-46FA-A0C3-F327E7B41356}" src="https://github.com/user-attachments/assets/74f66c8b-7ee4-4804-8205-9f44fd46af4f" />
+
+----
+
+4. Create *Source* and *Sink* datasets for the pipeline.
+
+<img width="743" height="131" alt="{24584F7E-F6A7-4DA4-92F1-0FE05DE253C7}" src="https://github.com/user-attachments/assets/dd036510-e3be-4271-8a50-9802f735683c" />
+
+<img width="731" height="129" alt="{19475413-A5C5-48D9-8563-B6B18D41C637}" src="https://github.com/user-attachments/assets/ca65a8e3-574c-4b10-84c6-fb4489165f99" />
+
 
 ### Repository Structure
 
