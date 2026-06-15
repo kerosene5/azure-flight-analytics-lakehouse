@@ -1,3 +1,5 @@
+# Steps
+
 
 1. Build storage containers for **each** layer (an extra container named *landing* is used to facilitate the data ingestion pipeline, as well as imitate a file store)
 
@@ -38,3 +40,8 @@
 <img width="828" height="204" alt="{D298FFFF-AC1E-4C7E-9FE1-88A79F77C053}" src="https://github.com/user-attachments/assets/b9198b34-81df-4135-a685-06e4b131b9b8" />
 
 ----
+
+7. Check the **bronze** container to verify our pipeline run.
+
+<img width="1006" height="280" alt="{E91D5FA8-C7E0-4A75-B219-1967A7CFBF6A}" src="https://github.com/user-attachments/assets/8b275ad5-47eb-41d6-8795-9a8ba3b0f62a" />
+
