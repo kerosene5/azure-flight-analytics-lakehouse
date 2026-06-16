@@ -267,6 +267,7 @@ The following *KPIs (Key Performance Indicators)* are used:
 
 does anyone even read this? 
 
+gotta get good at python, oss too
 ### Roadmap
 
 ### Repository Structure
