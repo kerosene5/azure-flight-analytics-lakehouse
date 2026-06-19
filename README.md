@@ -265,6 +265,8 @@ The following *KPIs (Key Performance Indicators)* are used:
 
 ## Project Overview
 
+i'd like to use adf to orchestrate everything while using databricks notebooks to run the sripts.
+
 ### Roadmap
 
 ### Repository Structure
