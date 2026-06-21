@@ -265,7 +265,7 @@ The following *KPIs (Key Performance Indicators)* are used:
 
 ## Project Overview
 
-i'd like to use adf to orchestrate everything while using databricks notebooks to run the sripts. for now, bronze to silver is in progress, and i really wanna just finish all this by the time monday rolls around so i can focus on other things.
+i'd like to use adf to orchestrate everything while using databricks notebooks to run the sripts. for now, bronze to silver is in progress, and i really wanna just finish all this by the time monday rolls around so i can focus on other things. doesnt look lik ethings will be done by monday:(
 
 ### Roadmap
 
