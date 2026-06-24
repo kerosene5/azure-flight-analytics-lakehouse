@@ -264,7 +264,7 @@ The following *KPIs (Key Performance Indicators)* are used:
 
 
 ## Project Overview
- i hope i survive this week
+ i hope i survive this week, me too
 
 ### Roadmap
 
