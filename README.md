@@ -264,7 +264,7 @@ The following *KPIs (Key Performance Indicators)* are used:
 
 
 ## Project Overview
- i hope i survive this week, me too
+ i hope i survive this week, me too, i hope i can become a pipeliner so my github stays green
 
 ### Roadmap
 
